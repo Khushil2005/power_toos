@@ -3,7 +3,8 @@ module.exports = {
     MongoDB_URL: "mongodb+srv://khirsariyakhushil11:97FVE109nMI0g3bU@powertools.wlvhy2y.mongodb.net/powertools",
     // App_URL: "http://192.168.1.5:5000",
     // App_URL: "http://192.168.215.65:5000",
-    App_URL: "http://localhost:5000",
+    // App_URL: "http://localhost:5000",
+    App_URL: "https://power-toos.onrender.com",
     key_id: "rzp_test_oYzCquEuAY3r9N",
     key_secrate: "UOQTdhf1aVVuZwg8Nxf2yDc8",
     httpErrors: {

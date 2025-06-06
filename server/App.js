@@ -14,7 +14,11 @@ const categoryController = require("./Category/CategoryCantroller")
 require("dotenv").config()
 
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: ['https://power-toos-74rz.vercel.app', 'https://power-toos.vercel.app'],
+    credentials: true
+}));
+// app.options('*', cors());
 app.use(express.json())
 connectDb()
 // productController.orderlist()
