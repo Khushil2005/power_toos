@@ -88,7 +88,7 @@ class OrderController {
         try {
             const { userId } = req.params
             const user = await userModel.model.findOne({ _id: userId })
-            if (user?.role === 3) {
+            if (user?.role === 0) {
                 const result = await orderModel.model.find().populate([{ path: "user" }, { path: "address" }])
                 if (!result) throw httpErrors[500]
                 return res.status(200).send({ message: httpsuccess, data: result })
@@ -143,9 +143,7 @@ class OrderController {
     async listOrderByStatus(req, res) {
         try {
             const { orderStatus, userId } = req.body
-            console.log(req.body)
             const user = await userModel.model.findOne({ _id: userId })
-            console.log(user)
             let result
             if (user.role === 1) {
                 result = await orderModel.model.find().populate([{ path: "user" }, { path: "address" }])
