@@ -2,9 +2,10 @@ import axios from "axios"
 
 class ApiHelper {
     constructor() {
-        this.baseUrl = "http://192.168.1.5:5000"
+        // this.baseUrl = "http://192.168.1.5:5000"
         // this.baseUrl = "http://192.168.215.65:5000"
         // this.baseUrl = "http://localhost:5000"
+        this.baseUrl = "https://power-toos.onrender.com"
     }
     loginUser(data) {
         return axios.post(this.baseUrl + "/user/login", data)
