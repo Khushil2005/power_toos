@@ -27,6 +27,10 @@ app.use("/product", productRouter)
 app.use("/cart", cartRouter)
 app.use("/order", orderRouter)
 
+app.get("/", (req, res) => {
+    return res.send({ message: "Success" })
+})
+
 app.listen(PORT || 5000, () => {
     console.log("Server Started")
 })
